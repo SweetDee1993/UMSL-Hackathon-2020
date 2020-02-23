@@ -33,6 +33,28 @@ def diabetes():
                             message='Must use GET request type...')
 
 
+@app.route('/diabetes-analysis', methods=['GET', 'POST'])
+def diabetesAnalysis():
+    if request.method == 'POST':
+        num_preg = request.values['num_preg'].strip()
+        glucoseLevel = request.values['glucoseLevel'].strip()
+        bloodPressure = request.values['bloodPressure'].strip()
+        skinThickness = request.values['skinThickness'].strip()
+        insulin = request.values['insulin'].strip()
+        bmi = request.values['bmi'].strip()
+        diabetesePedigree = request.values['diabetesePedigree'].strip()
+        age = request.values['age'].strip()
+
+        return "num_preg: " + num_preg + " glucoseLevel: " +  glucoseLevel + " bloodPressure " + bloodPressure \
+            + " skinThickness " + skinThickness + " insulin " + insulin + " bmi " + bmi \
+            + " diabetesePedigree " + diabetesePedigree + " age " + age 
+
+
+    return render_template('error.html',
+                            title='Error!',
+                            message='Must use GET request type...')
+
+
 @app.route('/heart-disease', methods=['GET', 'POST'])
 def heartDisease():
     if request.method == 'GET':
