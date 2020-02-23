@@ -18,7 +18,7 @@ msgHandler = MessageHandler()
 def root():
     if request.method == 'GET':
         return render_template('index.html',
-                                title=':::Reaper Creeper:::')
+                                title=':::Health Genie:::')
 
     return render_template('error.html',
                             title='Error!',
@@ -70,6 +70,16 @@ def heartDisease():
                             title='Error!',
                             message='Must use GET request type...')
 
+
+@app.route('/about', methods=['GET', 'POST'])
+def about():
+    if request.method == 'GET':
+        return render_template('about.html',
+                                title=':::Health Genie - About:::')
+
+    return render_template('error.html',
+                            title='Error!',
+                            message='Must use GET request type...')
 
 @app.route('/heart-disease-analysis', methods=['GET', 'POST'])
 def heartDiseaseAnalysis():

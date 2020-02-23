@@ -5,86 +5,65 @@
 {% endblock body_header_additional %}
 
 {% block body_content %}
-
-
     <div class="container">
       <div class="row">
-        <form class=" " action="/diabetes-analysis" method="POST">
+        <div class="col">
+          <form class="align-self-center" action="/diabetes-analysis" method="POST">
+            <div class="form-group">
+              <h4> # of pregnancies:</h4>&nbsp;
+              <input type="text" name="num_preg" value="">
+            </div>
+  
+            <div class="form-group">
+              <h4> Glucose Level:</h4>&nbsp;
+              <input type="text" name="glucoseLevel" value="">
+            </div>
+  
+            <div class="form-group">
+              <h4> Blood Pressure:</h4>&nbsp;
+              <input type="text" name="bloodPressure" value="">
+            </div>
+  
+            <div class="form-group">
+              <h4> Skin Thickness:</h4>&nbsp;
+              <input type="text" name="skinThickness" value="">
+            </div>
+  
+            <div class="form-group">
+              <h4>Do you have Diabetes?</h4>
+              <div class="form-group">
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="insulin" value="0"> No
+                </label>
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="insulin" value="1"> Yes
+                </label>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <h4> BMI:</h4>&nbsp;
+              <input type="text" name="bmi" value="">
+            </div>
+  
+            <div class="form-group">
+              <h4> Diabetese Pedigree Function:</h4>&nbsp;
+              <input type="text" name="diabetesePedigree" value="">
+            </div>
 
-          <div class="form-inline">
-          <div class="form-group">
-            <h4> # of pregnancies:</h4>&nbsp;
-            <input type="text" name="num_preg" value="">
-          </div>
-          <div class="form-group">
-          </div>
-          </div>
+            
+            <div class="form-group">
+              <h4> Age:</h4>&nbsp;
+              <input type="text" name="age" value="">
+            </div>
+  
+            <input class="btn btn-success" type="submit"/>
+          </form>
+        </div>
+        <div class="col">
+          <img src="https://images.emedihealth.com/2019/09/diabetes-signs.jpg" alt="">
+        </div>
 
-          <div class="form-inline">
-          <div class="form-group">
-            <h4> Glucose Level:</h4>&nbsp;
-            <input type="text" name="glucoseLevel" value="">
-          </div>
-          <div class="form-group">
-          </div>
-          </div>
-
-          <div class="form-inline">
-          <div class="form-group">
-            <h4> Blood Pressure:</h4>&nbsp;
-            <input type="text" name="bloodPressure" value="">
-          </div>
-          <div class="form-group">
-          </div>
-          </div>
-
-          <div class="form-inline">
-          <div class="form-group">
-            <h4> Skin Thickness:</h4>&nbsp;
-            <input type="text" name="skinThickness" value="">
-          </div>
-          <div class="form-group">
-          </div>
-          </div>
-
-          <div class="form-inline">
-          <div class="form-group">
-            <h4> Insulin:</h4>&nbsp;
-            <input type="text" name="insulin" value="">
-          </div>
-          <div class="form-group">
-          </div>
-          </div>
-
-          <div class="form-inline">
-          <div class="form-group">
-            <h4> BMI:</h4>&nbsp;
-            <input type="text" name="bmi" value="">
-          </div>
-          <div class="form-group">
-          </div>
-          </div>
-
-          <div class="form-inline">
-          <div class="form-group">
-            <h4> Diabetese Pedigree Function:</h4>&nbsp;
-            <input type="text" name="diabetesePedigree" value="">
-          </div>
-          <div class="form-group">
-          </div>
-          </div>
-
-          <div class="form-inline">
-          <div class="form-group">
-            <h4> Age:</h4>&nbsp;
-            <input type="text" name="age" value="">
-          </div>
-          <div class="form-group">
-          </div>
-          </div>
-
-          <input class="btn btn-success" type="submit"/>
-        </form>
       </div>
     </div>
 {% endblock body_content %}

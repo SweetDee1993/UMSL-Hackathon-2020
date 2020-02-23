@@ -8,94 +8,100 @@
 
     <div class="container">
         <div class="row">
-          <form class=" " action="/heart-disease-analysis" method="POST">
-            <h4>Enter your age<h4>
-            <label><input type="text" name="age" value=""></label>
-
-            <h4>Choose your gender</h4>
-            <div class="form-group">
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="gender" value="1"> Male
+          <div class="col">
+            <form class=" " action="/heart-disease-analysis" method="POST">
+              <h4>Enter your age<h4>
+              <label><input type="text" name="age" value=""></label>
+  
+              <h4>Choose your gender</h4>
+              <div class="form-group">
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="gender" value="1"> Male
+                </label>
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="gender" value="0"> Female
+                </label>
+              </div>
+  
+              <h4>Education</h4>
+              <label>
+              <select name="education">
+                <option value="0">No Education</option>
+                <option value="1">High School</option>
+                <option value="2">Some College</option>
+                <option value="3">4 Years Degree</option>
+                <option value="4">More</option>
+              </select>
               </label>
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="gender" value="0"> Female
-              </label>
-            </div>
+  
+  
+              <h4>Are you a current smoker?</h4>
+              <div class="form-group">
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="isSmoker" value="0"> No
+                </label>
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="isSmoker" value="1"> Yes
+                </label>
+              </div>
+  
+              <h4>How many cigarettes do you smoke per day?</h4>
+              <label><input type="text" name="num_cigs" value=""></label>
+  
+              <h4>Do you take Blood Pressure medicines?</h4>
+              <div class="form-group">
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="isOnBloodpressureMeds" value="0"> No
+                </label>
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="isOnBloodpressureMeds" value="1"> Yes
+                </label>
+              </div>
+  
+              <h4>Have you had a prevalent stroke?</h4>
+              <div class="form-group">
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="hasPrevalentstroke" value="0"> No
+                </label>
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="hasPrevalentstroke" value="1"> Yes
+                </label>
+              </div>
+  
+              <h4>Do you have high blood pressure?</h4>
+              <div class="form-group">
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="hasHighbloodpressure" value="0"> No
+                </label>
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="hasHighbloodpressure" value="1"> Yes
+                </label>
+              </div>
+  
+              <h4>Do you have Diabetes?</h4>
+              <div class="form-group">
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="hasDiabetes" value="0"> No
+                </label>
+                <label class="mr-3">
+                  <input type="radio" class="mr-1" name="hasDiabetes" value="1"> Yes
+                </label>
+              </div>
+  
+              <h4>Weight (pounds):</h4>
+              <label><input type="text" name="weight" value="">pounds</label>
+  
+              <h4>Height (feet and inches):</h4>
+              <label><input type="text" name="height" value="">feet and inches</label>
+  
+  
+              <input class="btn btn-success" type="submit"/>
+            </form>
+          </div>
 
-            <h4>Education</h4>
-            <label>
-            <select name="education">
-              <option value="0">No Education</option>
-              <option value="1">High School</option>
-              <option value="2">Some College</option>
-              <option value="3">4 Years Degree</option>
-              <option value="4">More</option>
-            </select>
-            </label>
-
-
-            <h4>Are you a current smoker?</h4>
-            <div class="form-group">
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="isSmoker" value="0"> No
-              </label>
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="isSmoker" value="1"> Yes
-              </label>
-            </div>
-
-            <h4>How many cigarettes do you smoke per day?</h4>
-            <label><input type="text" name="num_cigs" value=""></label>
-
-            <h4>Do you take Blood Pressure medicines?</h4>
-            <div class="form-group">
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="isOnBloodpressureMeds" value="0"> No
-              </label>
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="isOnBloodpressureMeds" value="1"> Yes
-              </label>
-            </div>
-
-            <h4>Have you had a prevalent stroke?</h4>
-            <div class="form-group">
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="hasPrevalentstroke" value="0"> No
-              </label>
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="hasPrevalentstroke" value="1"> Yes
-              </label>
-            </div>
-
-            <h4>Do you have high blood pressure?</h4>
-            <div class="form-group">
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="hasHighbloodpressure" value="0"> No
-              </label>
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="hasHighbloodpressure" value="1"> Yes
-              </label>
-            </div>
-
-            <h4>Do you have Diabetes?</h4>
-            <div class="form-group">
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="hasDiabetes" value="0"> No
-              </label>
-              <label class="mr-3">
-                <input type="radio" class="mr-1" name="hasDiabetes" value="1"> Yes
-              </label>
-            </div>
-
-            <h4>Weight (pounds):</h4>
-            <label><input type="text" name="weight" value="">pounds</label>
-
-            <h4>Height (feet and inches):</h4>
-            <label><input type="text" name="height" value="">feet and inches</label>
-
-
-            <input class="btn btn-success" type="submit"/>
-          </form>
+          <div class="col">
+            <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/heart_disease_overview_slideshow/PRinc_rm_arteriogram_of_healthy_heart.jpg" alt="">
+          </div>
         </div>
     </div>
 {% endblock body_content %}
