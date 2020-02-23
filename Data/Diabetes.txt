@@ -1,0 +1,8 @@
+# of pregnancies:
+Glucose Level:
+Blood Pressure:
+Skin Thickness:
+Insulin
+BMI:
+Diabetese Pedigree Function:
+Age:
