@@ -49,7 +49,19 @@ def heartDiseaseAnalysis():
     if request.method == 'POST':
         age    = request.values['age'].strip()
         gender = request.values['gender'].strip()
-        return "Age: " + age + " Gender: " +  gender
+        education = request.values['education'].strip()
+        isSmoker = request.values['isSmoker'].strip()
+        num_cigs = request.values['num_cigs'].strip()
+        isOnBloodpressureMeds = request.values['isOnBloodpressureMeds'].strip()
+        hasPrevalentstroke = request.values['hasPrevalentstroke'].strip()
+        hasHighbloodpressure = request.values['hasHighbloodpressure'].strip()
+        hasDiabetes = request.values['hasDiabetes'].strip()
+        weight = request.values['weight'].strip()
+        height = request.values[ 'height'].strip()
+        return "Age: " + age + " Gender: " +  gender + " Education: " + education \
+            + " isSmoker " + isSmoker + " num_cigs " + num_cigs + " isOnBloodpressureMeds " + isOnBloodpressureMeds \
+            + " hasPrevalentstroke " + hasPrevalentstroke + " hasHighbloodpressure " + hasHighbloodpressure \
+            + " hasDiabetes " + hasDiabetes + " weight " + weight + " height " + height
 
     return render_template('error.html',
                             title='Error!',
