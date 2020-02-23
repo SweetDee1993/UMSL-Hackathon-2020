@@ -1,9 +1,12 @@
 from flask import request, render_template
 from . import app, db                         # Get from __init__
-
+import tensorflow as tf
+import keras
+from keras.models import Sequential
+from keras.layers import Dense
 from .models import Table                    # Get db models
 from .MessageHandler import MessageHandler   # Get simple message processor
-
+import numpy as np
 
 # Python imports
 
@@ -45,9 +48,11 @@ def diabetesAnalysis():
         diabetesePedigree = request.values['diabetesePedigree'].strip()
         age = request.values['age'].strip()
 
+        Minimum = np.array([0.00,0.00,0.00,0.00,0.00,0.00,0.08,21.00])
+
         return "num_preg: " + num_preg + " glucoseLevel: " +  glucoseLevel + " bloodPressure " + bloodPressure \
             + " skinThickness " + skinThickness + " insulin " + insulin + " bmi " + bmi \
-            + " diabetesePedigree " + diabetesePedigree + " age " + age 
+            + " diabetesePedigree " + diabetesePedigree + " age " + age
 
 
     return render_template('error.html',
