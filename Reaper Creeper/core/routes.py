@@ -48,11 +48,11 @@ def diabetesAnalysis():
         diabetesePedigree = request.values['diabetesePedigree'].strip()
         age = request.values['age'].strip()
 
-        Minimum = np.array([0.00,0.00,0.00,0.00,0.00,0.00,0.08,21.00])
+        # Minimum = np.array([0.00,0.00,0.00,0.00,0.00,0.00,0.08,21.00])
 
-        return "num_preg: " + num_preg + " glucoseLevel: " +  glucoseLevel + " bloodPressure " + bloodPressure \
-            + " skinThickness " + skinThickness + " insulin " + insulin + " bmi " + bmi \
-            + " diabetesePedigree " + diabetesePedigree + " age " + age
+        return render_template('results.html',
+                                disease='Diabetes',
+                                percentage="13%")
 
 
     return render_template('error.html',
@@ -81,6 +81,7 @@ def about():
                             title='Error!',
                             message='Must use GET request type...')
 
+
 @app.route('/heart-disease-analysis', methods=['GET', 'POST'])
 def heartDiseaseAnalysis():
     if request.method == 'POST':
@@ -95,11 +96,10 @@ def heartDiseaseAnalysis():
         hasDiabetes = request.values['hasDiabetes'].strip()
         weight = request.values['weight'].strip()
         height = request.values[ 'height'].strip()
-        return "Age: " + age + " Gender: " +  gender + " Education: " + education \
-            + " isSmoker " + isSmoker + " num_cigs " + num_cigs + " isOnBloodpressureMeds " + isOnBloodpressureMeds \
-            + " hasPrevalentstroke " + hasPrevalentstroke + " hasHighbloodpressure " + hasHighbloodpressure \
-            + " hasDiabetes " + hasDiabetes + " weight " + weight + " height " + height
-
+        return render_template('results.html',
+                                disease='Heart Disease',
+                                percentage="56%")
+        
     return render_template('error.html',
                             title='Error!',
                             message='Must use GET request type...')
