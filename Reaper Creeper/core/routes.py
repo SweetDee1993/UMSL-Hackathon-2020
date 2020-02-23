@@ -15,7 +15,18 @@ msgHandler = MessageHandler()
 def root():
     if request.method == 'GET':
         return render_template('index.html',
-                                title=':::APP TITLE:::')
+                                title=':::Reaper Creeper:::')
+
+    return render_template('error.html',
+                            title='Error!',
+                            message='Must use GET request type...')
+
+
+@app.route('/diabetes', methods=['GET', 'POST'])
+def diabetes():
+    if request.method == 'GET':
+        return render_template('diabetes.html',
+                                title=':::Reaper Creeper2:::')
 
     return render_template('error.html',
                             title='Error!',
