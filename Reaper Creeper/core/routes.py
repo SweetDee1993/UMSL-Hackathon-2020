@@ -1,12 +1,12 @@
 from flask import request, render_template
 from . import app, db                         # Get from __init__
-import tensorflow as tf
-import keras
-from keras.models import Sequential
-from keras.layers import Dense
+# import tensorflow as tf
+# import keras
+# from keras.models import Sequential
+# from keras.layers import Dense
 from .models import Table                    # Get db models
 from .MessageHandler import MessageHandler   # Get simple message processor
-import numpy as np
+# import numpy as np
 
 # Python imports
 
