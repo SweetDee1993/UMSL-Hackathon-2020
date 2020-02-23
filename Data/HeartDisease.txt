@@ -1,0 +1,11 @@
+Gender: Male = 1 Female = 0
+Age
+Education: No eduction = 0, High School = 1, Some College = 2, 4 year degree = 3, More = 4
+current smoker: no = 0, yes = 1
+cigs per day
+on Blood Pressure meds: no = 0, yes = 1
+have you had a prevalent stroke: no = 0, yes = 1
+Do you have high blood pressure?: no = 0, yes = 1
+Diabetes?: no = 0, yes = 1
+Weight (pounds):
+Height (feet and inches):
